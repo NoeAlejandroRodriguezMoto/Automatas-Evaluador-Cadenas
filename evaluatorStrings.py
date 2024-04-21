@@ -21,11 +21,11 @@ def print_header():
     print_line()
 
 def print_content(next_state, character, symbol, state):
-    print("|      {0:2}        |     {1:1}     |  {2:<7} |     {3:2}       |".format(next_state, character, symbol, state))
+    print("|      {0:2}        |     {1:1}     |  {2:<7} |    {3:2}      |".format(next_state, character, symbol, state))
     print_line()
 
 def print_line():
-    print("+" + "-" * 14 + "+" + "-" * 10 + "+" + "-" * 11 + "+" + "-" * 15 + "+")
+    print("+" + "-" * 16 + "+" + "-" * 11 + "+" + "-" * 10 + "+" + "-" * 12 + "+")
 
 state = 0
 
@@ -49,8 +49,8 @@ for character in string:
     print_content(next_state, character, symbol, state)
 
 if(state != 3):
-    print("|" + " " * 14 + "Invalid String" + " " * 25 + "|")
-    print("+" + "-" * 53 + "+")
+    print("|" + " " * 18 + "Invalid String" + " " * 20 + "|")
+    print("+" + "-" * 52 + "+")
 elif(state == 3):
     print_content(state, ' ', 'END', ' ')
     print("|" + " " * 17 + "Valid String" + " " * 26 + "|")
