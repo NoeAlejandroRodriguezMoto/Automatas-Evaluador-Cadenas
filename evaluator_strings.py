@@ -17,11 +17,11 @@ def classify_character(character):
         exit()
 
 def print_header():
-    print("|  Current State | Character |  Symbol  |Next State |")
+    print("|  Current State | Character |  Symbol  | Next State |")
     print_line()
 
 def print_content(next_state, character, symbol, state):
-    print("|     {0:2}       |    {1:1}     | {2:<7}   |     {3:2}       |".format(next_state, character, symbol, state))
+    print("|      {0:2}        |     {1:1}     |  {2:<7} |     {3:2}       |".format(next_state, character, symbol, state))
     print_line()
 
 def print_line():
