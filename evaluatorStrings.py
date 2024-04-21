@@ -53,5 +53,5 @@ if(state != 3):
     print("+" + "-" * 52 + "+")
 elif(state == 3):
     print_content(state, ' ', 'END', ' ')
-    print("|" + " " * 17 + "Valid String" + " " * 26 + "|")
-    print("+" + "-" * 53 + "+")
+    print("|" + " " * 21 + "Valid String" + " " * 19 + "|")
+    print("+" + "-" * 52 + "+")
