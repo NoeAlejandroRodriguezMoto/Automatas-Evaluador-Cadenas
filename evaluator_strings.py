@@ -25,13 +25,13 @@ def print_content(next_state, character, symbol, state):
     print_line()
 
 def print_line():
-    print("+--------------+----------+-----------+---------------+")
+    print("+" + "-" * 14 + "+" + "-" * 10 + "+" + "-" * 11 + "+" + "-" * 15 + "+")
 
 state = 0
 
-print ("""+---------------------------------------+
-|    Enter a string to evaluate:       |
-+---------------------------------------+""")
+print("+" + "-" * 39 + "+")
+print("|    Enter a string to evaluate:       |")
+print("+" + "-" * 39 + "+")
 string = input()
 print_line()
 print_header()
@@ -43,15 +43,15 @@ for character in string:
 
     if (state == "E"):
         print_content(next_state, character, symbol, state)
-        print("""|              Invalid String                         |
-+-----------------------------------------------------+""")
+        print("|" + " " * 14 + "Invalid String" + " " * 25 + "|")
+        print("+" + "-" * 53 + "+")
         exit()
     print_content(next_state, character, symbol, state)
 
 if(state != 3):
-    print("""|              Invalid String                         |
-+-----------------------------------------------------+""")
+    print("|" + " " * 14 + "Invalid String" + " " * 25 + "|")
+    print("+" + "-" * 53 + "+")
 elif(state == 3):
     print_content(state, ' ', 'END', ' ')
-    print("""|                Valid String                         |
-+-----------------------------------------------------+""")
+    print("|" + " " * 17 + "Valid String" + " " * 26 + "|")
+    print("+" + "-" * 53 + "+")
